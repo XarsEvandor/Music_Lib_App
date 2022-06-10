@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/albumCover"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:layout_margin="15dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="15dp">
+
+
+        <ImageView
+            android:id="@+id/albumCoverImage"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_launcher" />
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/auto_button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="35dp"
+        android:layout_marginTop="20dp"
+        android:textSize="15sp"
+        android:text="Auto complete"
+        android:textColor="@color/black"
+        android:elevation="15dp"
+        android:backgroundTint="@android:color/holo_orange_light"/>
+
+    <Button
+        android:id="@+id/check_image_button"
+        android:layout_below="@+id/auto_button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="35dp"
+        android:layout_marginTop="20dp"
+        android:textSize="15sp"
+        android:text="Check image"
+        android:textColor="@color/black"
+        android:elevation="15dp"
+        android:backgroundTint="@android:color/holo_orange_light"/>
+
+    <Button
+        android:id="@+id/confirm_button"
+        android:layout_below="@+id/check_image_button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="35dp"
+        android:layout_marginTop="20dp"
+        android:textSize="15sp"
+        android:text="Confirm"
+        android:textColor="@color/black"
+        android:elevation="15dp"
+        android:backgroundTint="@android:color/holo_orange_light"/>
+
+    <RatingBar
+        android:id="@+id/rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/albumCover"
+        android:layout_marginStart="20dp"
+        android:progressTint="@android:color/holo_orange_light"
+        android:progressBackgroundTint="#7E7777"
+        android:numStars="5"
+        android:stepSize="1" />
+
+    <EditText
+        android:id="@+id/title"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rating"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="15dp"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:hint="Title"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:id="@+id/artist"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="15dp"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:hint="Artist"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:id="@+id/releaseDate"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/artist"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="15dp"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:hint="Released on: dd/mm/yyyy"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:id="@+id/cover"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/releaseDate"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="15dp"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:hint="Cover URL"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:id="@+id/desc"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/cover"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="15dp"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:hint="Description"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

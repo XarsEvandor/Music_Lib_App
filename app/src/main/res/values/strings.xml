@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Final_Project</string>
+    <string name="title_activity_library">LibraryActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="edit_album">Edit_album</string>
+    <string name="sort_albums">Sort_albums</string>
+    <string name="add_album">Add_album</string>
+    <string name="released">Released: %s</string>
+    <string name="rating">Rating: %s/5</string>
+
+
+</resources>

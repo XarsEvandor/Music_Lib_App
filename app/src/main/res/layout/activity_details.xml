@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailsActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/albumCover"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:layout_margin="15dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="15dp">
+
+
+        <ImageView
+            android:id="@+id/albumCoverImage"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_launcher" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/albumTitle"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:text="Unknown"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="15dp"
+        android:autoSizeTextType="uniform" />
+
+    <TextView
+        android:id="@+id/releaseDate"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:text="Released: 01/01/2000"
+        android:layout_below="@+id/albumTitle"
+        android:layout_toEndOf="@+id/albumCover"
+        android:layout_marginStart="11.5dp"
+        android:layout_marginTop="30dp"
+        android:autoSizeTextType="uniform"
+        />
+
+    <RatingBar
+        android:id="@+id/rating"
+        style="@style/Widget.AppCompat.RatingBar.Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/releaseDate"
+        android:layout_toEndOf="@+id/albumCover"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="20dp"
+        android:numStars="5"
+        android:stepSize="1" />
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="350dp"
+        android:layout_height="250dp"
+        android:background="@drawable/border_shape"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/albumCover"
+        />
+
+    <ListView
+        android:id="@+id/artistListView"
+        android:background="@drawable/border_shape"
+        android:layout_below="@+id/desc"
+        android:layout_width="170dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="17dp"
+        android:listSelector="#878787"
+        />
+
+
+    <ListView
+        android:id="@+id/songListView"
+        android:background="@drawable/border_shape"
+        android:layout_below="@+id/desc"
+        android:layout_alignParentEnd="true"
+        android:layout_width="170dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="17dp"
+        android:listSelector="#878787"
+        />
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabCustomSize="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="5sp"
+        android:layout_marginEnd="5sp"
+        android:scaleType="center"
+        app:maxImageSize="46dp"
+        android:elevation="@dimen/cardview_compat_inset_shadow"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:tint="@color/black"
+        android:src="@drawable/edit"
+        android:contentDescription="@string/edit_album" />
+
+</RelativeLayout>
